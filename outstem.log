@@ -1,0 +1,66 @@
+Status `C:\Users\zheng026\.julia\environments\v1.4\Project.toml`
+  [16de7d52] PolyOrigin v0.5.4 #master (https://github.com/chaozhi/PolyOrigin.jl)
+=================================polyOrigin=================================
+PolyOrigin, polyOrigin, logfile=outstem.log, 2020-05-12T11:48:15.412
+list of input files: 
+genofile = geno.csv
+pedfile = ped.csv
+file input/output options: 
+delimchar = ,
+missingstring = NA
+commentstring = #
+----------------------------------phasing-----------------------------------
+PolyOrigin, polyPhase, logfile=IOStream(<file C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCommand\outstem.log>), 2020-05-12T11:48:28.434
+list of option values: 
+epsilon = 0.01
+seqerr = 0.001
+chrpairing_phase = 22
+byparent = true for simple biparental cross
+byneighbor = true for max(ploidy) >= 6
+chrsubset = all chromosomes
+snpsubset = all markers
+isparallel = false
+delmarker = true
+delsiglevel = 0.05
+maxstuck = 5
+maxiter = 30
+minrun = 3
+maxrun = 10
+refhapfile = nothing
+missingstring = NA
+outstem = outstem
+logfile = IOStream(<file C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCommand\outstem.log>)
+workdir = C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCommand
+verbose = true
+data: #pop=4, #parent=3, #offspring=40, #chr=1, #marker=120
+phasing connected parents: A, B, C
+#chr=A, run=1, it=7, logl=-1475.49, epsilon=0.01, nstuck=5, ndel=0
+#chr=A, run=2, it=8, logl=-1444.22, epsilon=0.0245, nstuck=6, ndel=0
+#chr=A, run=3, it=6, logl=-1475.49, epsilon=0.01, nstuck=5, ndel=0
+#chr=A, #marker=120, done, elapsed=61.0 seconds, #mismatch(run2 ~ runs) = [0, 0, 0]
+parentphased file: outstem_parentphased.csv
+End, 2020-05-12T11:49:33.906, time elapsed = 65.0 seconds by polyPhase
+-------------------------------reconstructing-------------------------------
+PolyOrigin, polyReconstruct!, 2020-05-12T11:49:33.986
+list of option values: 
+epsilon = 0.01
+seqerr = 0.001
+chrpairing = 44
+chrsubset = all chromosomes
+snpsubset = all markers
+isparallel = false
+correctthreshold = 0.15
+missingstring = NA
+outstem = outstem
+logfile = IOStream(<file C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCommand\outstem.log>)
+workdir = C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCommand
+verbose = true
+#chr=A, it=1, <eps>=0.0, #dose_diff=4, #phase_diff=4, #error_diff=68.0
+#chr=A, it=2, <eps>=0.0, no_error_correction
+parentcorrected file: outstem_parentphased_corrected.csv
+polyancestry file: outstem_polyancestry.csv
+genoprob file: outstem_genoprob.csv, a concise polyancestry file
+End, 2020-05-12T11:50:07.227, time elapsed = 33.0 seconds by polyReconstruct!
+----------------------------------------------------------------------------
+End, 2020-05-12T11:50:07.228, total time used = 112.0 seconds by polyOrigin
+============================================================================
