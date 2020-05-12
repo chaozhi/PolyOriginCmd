@@ -18,8 +18,7 @@ tryusing("ArgParse")
 
 function parse_commandline()
     s = ArgParseSettings()
-    s.description = "Haplotype reconstruction in polypoid multiparental populations"
-    cd(@__DIR__)
+    s.description = "Haplotype reconstruction in polypoid multiparental populations"    
     workdir = pwd()
     @add_arg_table! s begin
         "--genofile", "-g"
