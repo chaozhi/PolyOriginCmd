@@ -10,7 +10,6 @@ PolyOriginCmd is a package for using PolyOrigin.jl  (https://github.com/chaozhi/
 3) Run command line:
 
 ```
-pathtojulia\\julia.exe polyOrigin_main.jl --help
 pathtojulia\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv
 ```
 
