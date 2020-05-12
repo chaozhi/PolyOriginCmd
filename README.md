@@ -53,8 +53,7 @@ optional arguments:
                         stem of output filenames (default: "outstem")
   -w, --workdir WORKDIR
                         directory for reading and writing files
-                        (default:
-                        "C:\\Chaozhi\\Workspace\\JuliaWorkspace\\Workspace_Polyploid\\PolyOriginCmd")
+                        (default: direcotry of polyOrigin_main.jl)
   -v, --verbose VERBOSE
                         if true, print messages on console (type:
                         Bool, default: true)
