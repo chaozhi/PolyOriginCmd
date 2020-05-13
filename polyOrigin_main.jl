@@ -193,7 +193,7 @@ function main(args::Vector{String})
     delete!(parsed_args,:pedfile)
     push!(parsed_args,:logfile=>logfile)
     a=parsed_args[:chrsubset]
-    if occursin("[",a)  && occursin("]",a)
+    if a != nothing && occursin("[",a)  && occursin("]",a)
         parsed_args[:chrsubset]=string2vec(a,Int)
     end
     @time polyOrigin(genofile, pedfile; parsed_args...)

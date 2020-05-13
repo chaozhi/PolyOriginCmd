@@ -2,4 +2,4 @@ c:
 cd C:\Chaozhi\Workspace\JuliaWorkspace\Workspace_Polyploid\PolyOriginCmd
 C:\\Users\\zheng026\\AppData\\Local\\Programs\\Julia\\Julia-1.4.1\\bin\\julia.exe polyOrigin_main.jl -help
 C:\\Users\\zheng026\\AppData\\Local\\Programs\\Julia\\Julia-1.4.1\\bin\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv
-C:\\Users\\zheng026\\AppData\\Local\\Programs\\Julia\\Julia-1.4.1\\bin\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv --chrsubset "[1]"
+C:\\Users\\zheng026\\AppData\\Local\\Programs\\Julia\\Julia-1.4.1\\bin\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv --chrsubset [1]
