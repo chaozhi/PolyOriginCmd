@@ -4,18 +4,18 @@ PolyOriginCmd is a package for using PolyOrigin.jl  (https://github.com/chaozhi/
 
 ## Get started
 
-1) Download and install Julia at https://julialang.org/
+1) Download and install Julia available at https://julialang.org/
 2) Download PolyOriginCmd, and setup work directory including "polyOrigin_main.jl" and data files.
 2) In the command shell, change into your work directory
 3) Run command line:
 
 ```
-pathtojulia\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv
+C:\\path\\to\\bin\\julia.exe polyOrigin_main.jl -g geno.csv -p ped.csv
 ```
 
 ## Help
 ```
-pathtojulia\\julia.exe polyOrigin_main.jl --help
+C:\\path\\to\\bin\\julia.exe polyOrigin_main.jl --help
 ```
 ```
 usage: polyOrigin_main.jl -g GENOFILE -p PEDFILE
