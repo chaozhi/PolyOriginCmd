@@ -27,8 +27,7 @@ usage: polyOrigin_main.jl -g GENOFILE -p PEDFILE
                         [--seqerr SEQERR]
                         [--chrpairing_phase CHRPAIRING_PHASE]
                         [--chrpairing CHRPAIRING]
-                        [--chrsubset CHRSUBSET]
-                        [--isparallel ISPARALLEL]
+                        [--chrsubset CHRSUBSET] [--nworker NWORKER]
                         [--delsiglevel DELSIGLEVEL]
                         [--maxstuck MAXSTUCK] [--maxiter MAXITER]
                         [--minrun MINRUN] [--maxrun MAXRUN]
@@ -53,8 +52,7 @@ optional arguments:
   -p, --pedfile PEDFILE
                         filename for pedigree info
   --delimchar DELIMCHAR
-                        text delimiter (type: AbstractChar, default:
-                        ',')
+                        text delimiter (type: AbstractChar, default: ',')
   --missingstring MISSINGSTRING
                         string code for missing value (default: "NA")
   --commentstring COMMENTSTRING
@@ -85,9 +83,8 @@ optional arguments:
                         all chromosomes,            e.g, "[2,10]"
                         denotes the second and tenth chromosomes
                         (default: "nothing")
-  --isparallel ISPARALLEL
-                        if true, multicore computing over chromosomes
-                        (type: Bool, default: false)
+  --nworker NWORKER     number of parallel workers for computing among
+                        chromosomes (type: Int64, default: 1)
   --delsiglevel DELSIGLEVEL
                         if true, delete markers during parental
                         phasing (type: Float64, default: 0.05)
