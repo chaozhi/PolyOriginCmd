@@ -27,7 +27,8 @@ usage: polyOrigin_main.jl -g GENOFILE -p PEDFILE
                         [--seqerr SEQERR]
                         [--chrpairing_phase CHRPAIRING_PHASE]
                         [--chrpairing CHRPAIRING]
-                        [--chrsubset CHRSUBSET] [--nworker NWORKER]
+                        [--chrsubset CHRSUBSET] [--snpthin SNPTHIN]
+                        [--nworker NWORKER]
                         [--delsiglevel DELSIGLEVEL]
                         [--maxstuck MAXSTUCK] [--maxiter MAXITER]
                         [--minrun MINRUN] [--maxrun MAXRUN]
@@ -52,7 +53,8 @@ optional arguments:
   -p, --pedfile PEDFILE
                         filename for pedigree info
   --delimchar DELIMCHAR
-                        text delimiter (type: AbstractChar, default: ',')
+                        text delimiter (type: AbstractChar, default:
+                        ',')
   --missingstring MISSINGSTRING
                         string code for missing value (default: "NA")
   --commentstring COMMENTSTRING
@@ -70,45 +72,47 @@ optional arguments:
                         (type: Float64, default: 0.001)
   --chrpairing_phase CHRPAIRING_PHASE
                         chromosome pairing in parental phasing, with
-                        22 being only            bivalent formations
-                        and 44 being bi- and quadri-valent formations
+                        22 being only        bivalent formations and
+                        44 being bi- and quadri-valent formations
                         (type: Int64, default: 22)
   --chrpairing CHRPAIRING
                         chromosome pairing in offspring decoding, with
-                        22 being only            bivalent formations
-                        and 44 being bivalent and quadrivalent
-                        formations (type: Int64, default: 44)
+                        22 being only        bivalent formations and
+                        44 being bivalent and quadrivalent formations
+                        (type: Int64, default: 44)
   --chrsubset CHRSUBSET
                         subset of chromosomes, with nothing denoting
-                        all chromosomes,            e.g, "[2,10]"
-                        denotes the second and tenth chromosomes
-                        (default: "nothing")
+                        all chromosomes,        e.g, "[2,10]" denotes
+                        the second and tenth chromosomes (default:
+                        "nothing")
+  --snpthin SNPTHIN     subset of markers by taking every snpthin-th
+                        markers (type: Int64, default: 1)
   --nworker NWORKER     number of parallel workers for computing among
                         chromosomes (type: Int64, default: 1)
   --delsiglevel DELSIGLEVEL
                         if true, delete markers during parental
                         phasing (type: Float64, default: 0.05)
   --maxstuck MAXSTUCK   the max number of consecutive iterations that
-                        are rejected            in a phasing run
-                        (type: Int64, default: 5)
+                        are rejected        in a phasing run (type:
+                        Int64, default: 5)
   --maxiter MAXITER     the max number of iterations in a phasing run
                         (type: Int64, default: 30)
   --minrun MINRUN       if the min number of phasing runs that are at
-                        the same local maximimum or            have
-                        the same parental phases reaches minrun,
-                        phasing algorithm will stop before reaching
-                        the maxrun. (type: Int64, default: 3)
+                        the same local maximimum or        have the
+                        same parental phases reaches minrun, phasing
+                        algorithm will stop before reaching the
+                        maxrun. (type: Int64, default: 3)
   --maxrun MAXRUN       the max number of phasing runs (type: Int64,
                         default: 10)
-  --byparent BYPARENT   if true, update parental phases
-                        parent by parent; if false, update parental
-                        phases one subpopulation by subpopulation.
-                        (type: Bool, default: true)
+  --byparent BYPARENT   if true, update parental phases         parent
+                        by parent; if false, update parental phases
+                        one subpopulation by subpopulation. (type:
+                        Bool, default: true)
   --refhapfile REFHAPFILE
-                        reference haplotype file            for
-                        setting absolute parental phases. It has the
-                        same format as the input genofile,
-                        except that parental genotypes are phased and
+                        reference haplotype file        for setting
+                        absolute parental phases. It has the same
+                        format as the input genofile,        except
+                        that parental genotypes are phased and
                         offspring genotypes are ignored if they exist.
                         (default: "nothing")
   --correctthreshold CORRECTTHRESHOLD
@@ -137,13 +141,13 @@ optional arguments:
                         markers. (type: Float64, default: 20.0)
   --maxepsilon MAXEPSILON
                         markers in map refinement are removed it they
-                        have error            rates > maxepsilon.
-                        (type: Float64, default: 0.5)
+                        have error        rates > maxepsilon. (type:
+                        Float64, default: 0.5)
   --skeletonsize SKELETONSIZE
                         the number of markers in the skeleton map that
-                        is used            to reduce map length
-                        inflation by subsampling markers (type: Int64,
-                        default: 50)
+                        is used        to reduce map length inflation
+                        by subsampling markers (type: Int64, default:
+                        50)
   -o, --outstem OUTSTEM
                         stem of output filenames (default: "outstem")
   -w, --workdir WORKDIR
