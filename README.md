@@ -43,6 +43,7 @@ usage: polyOrigin_main.jl -g GENOFILE -p PEDFILE
                         [--stripdis STRIPDIS]
                         [--maxepsilon MAXEPSILON]
                         [--skeletonsize SKELETONSIZE] [-o OUTSTEM]
+                        [--isplot ISPLOT]
                         [-w WORKDIR] [-v VERBOSE] [-h]
 
 Haplotype reconstruction in polypoid multiparental populations
@@ -148,6 +149,8 @@ optional arguments:
                         is used        to reduce map length inflation
                         by subsampling markers (type: Int64, default:
                         50)
+  --isplot ISPLOT
+                        if true, plot haploprob (type: Bool, default: false)                        
   -o, --outstem OUTSTEM
                         stem of output filenames (default: "outstem")
   -w, --workdir WORKDIR
@@ -165,17 +168,18 @@ optional arguments:
 
 
  Return 0 if success, and export four output files.
- 
+
  Argument      |Description
 ------------- |----------------
 ```outstem.log```     |  log file
 ```outstem_doseprob.csv```     |  posterior dosage probabilities for all offspring
 ```outstem_parentphased.csv```     |  same as input genofile except parents being phased
 ```outstem_parentphased_corrected.csv```     |  exported if there exist detected parental errors
-```outstem_polyancestry.csv```     |  genoprob and estimation of chromosome pairing 
+```outstem_polyancestry.csv```     |  genoprob and estimation of chromosome pairing
 ```outstem_genoprob.csv```     |  a simplified version of outstem_polyancestry.csv
+```outstem_plots```     |  a folder contains plots of haploprob for all offspring if isplot = true
 
-Here outstem_doseprob.csv, outstem_parentphased.csv, and outstem_parentphased_corrected.csv can be iteratively used as input genofile, so that the step of parental phasing will be skipped.  The outstem_doseprob.csv can be used for correcting observed genotypes and imputing missing genotypes, using an appropriate threshould. 
+Here outstem_doseprob.csv, outstem_parentphased.csv, and outstem_parentphased_corrected.csv can be iteratively used as input genofile, so that the step of parental phasing will be skipped.  The outstem_doseprob.csv can be used for correcting observed genotypes and imputing missing genotypes, using an appropriate threshould.
 
 ## Citing PolyOrigin
 
