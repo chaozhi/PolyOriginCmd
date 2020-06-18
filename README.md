@@ -167,7 +167,7 @@ optional arguments:
 ## Outputs
 
 
- Return 0 if success, and export four output files.
+ Return 0 if success, and export output files.
 
  Argument      |Description
 ------------- |----------------
