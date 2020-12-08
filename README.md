@@ -162,27 +162,23 @@ optional arguments:
   -h, --help            show this help message and exit
 ```  
 
-
-
 ## Outputs
-
 
  Return 0 if success, and export output files.
 
  Argument      |Description
 ------------- |----------------
 ```outstem.log```     |  log file
-```outstem_doseprob.csv```     |  posterior dosage probabilities for all offspring
-```outstem_parentphased.csv```     |  same as input genofile except parents being phased
+```outstem_maprefined.csv```     |  same as input genofile except that marker map being refined
+```outstem_parentphased.csv```     |  same as input genofile exceptthat  parents being phased
 ```outstem_parentphased_corrected.csv```     |  exported if there exist detected parental errors
-```outstem_polyancestry.csv```     |  genoprob and estimation of chromosome pairing
+```outstem_polyancestry.csv```     |  genoprob and estimation of valent configurations
 ```outstem_genoprob.csv```     |  a simplified version of outstem_polyancestry.csv
-```outstem_plots```     |  a folder contains plots of haploprob for all offspring if isplot = true
-
-Here outstem_doseprob.csv, outstem_parentphased.csv, and outstem_parentphased_corrected.csv can be iteratively used as input genofile, so that the step of parental phasing will be skipped.  The outstem_doseprob.csv can be used for correcting observed genotypes and imputing missing genotypes, using an appropriate threshould.
+```outstem_postdoseprob.csv```     |  posterior dosage probabilities for all offspring
+```outstem_plots```     |  a folder contains plots of condprob for all offspring if isplot = true
 
 ## Citing PolyOrigin
 
  If you use PolyOrigin in your analyses and publish your results, please cite the article:
 
-  *Zheng C, Amadeu R, Munoz P, and Endelman J. 2020. Haplotype reconstruction in tetraploid multi-parental populations. In preparation.*
+  *Zheng C, Amadeu R, Munoz P, and Endelman J. 2020. Haplotype reconstruction in connected tetraploid F1 populations. Manuscript.*
