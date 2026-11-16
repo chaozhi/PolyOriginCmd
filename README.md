@@ -1,6 +1,17 @@
 # PolyOriginCmd
 
-PolyOriginCmd is a package for using PolyOrigin.jl  (https://github.com/chaozhi/PolyOrigin.jl) in a command line
+PolyOriginCmd is a package for using PolyOrigin1 in a command line
+
+Install by running in Julia REPL, 
+
+> julia>]add https://github.com/chaozhi/PolyOrigin.jl#v1legacy
+ 
+where `]` enters Pkg REPL mode.
+
+> [!NOTE]
+> PolyOrigin has been upgraded. After installing PolyOrigin2 by `add https://github.com/chaozhi/PolyOrigin.jl`, 
+> the command line interface has been made available by `~/.julia/bin/polyorigin.bat`.  See the repository at 
+> https://github.com/chaozhi/PolyOrigin.jl. 
 
 ## Get started
 
